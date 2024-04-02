@@ -4,8 +4,8 @@ system.time({
 library(dplyr)
 library(lubridate)
 library(readxl)
-po_line <- read_excel("po_line.xlsx")
-on_hand <- read_excel("on_hand.xlsx")
+po_line <- read_xlsx("po_line.xlsx")
+on_hand <- read_xlsx("on_hand.xlsx")
 
 on_hand$week <- as.numeric(substr(on_hand$dt, 5, 6))
 po_line$crtd_dt <- as.Date(po_line$crtd_dt, "%Y-%m-%d")
